@@ -87,6 +87,9 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+    pyright
+    gopls
+    nodePackages.typescript-language-server
   ];
 in {
   # This is the neovim derivation
