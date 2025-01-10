@@ -37,7 +37,6 @@ cmp.setup {
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
 
       menu = {
-        buffer = '[BUF]',
         nvim_lsp = '[LSP]',
         nvim_lsp_signature_help = '[LSP]',
         nvim_lsp_document_symbol = '[LSP]',
@@ -53,13 +52,6 @@ cmp.setup {
     end,
   },
   mapping = {
-    ['<C-b>'] = cmp.mapping(function(_)
-      if cmp.visible() then
-        cmp.scroll_docs(-4)
-      else
-        complete_with_source('buffer')
-      end
-    end, { 'i', 'c', 's' }),
     ['<C-f>'] = cmp.mapping(function(_)
       if cmp.visible() then
         cmp.scroll_docs(4)
@@ -105,7 +97,6 @@ cmp.setup {
     -- The insertion order influences the priority of the sources
     { name = 'nvim_lsp', keyword_length = 3 },
     { name = 'nvim_lsp_signature_help', keyword_length = 3 },
-    { name = 'buffer' },
     { name = 'path' },
   },
   enabled = function()
