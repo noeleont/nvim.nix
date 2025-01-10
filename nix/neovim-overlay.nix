@@ -60,6 +60,7 @@ with final.pkgs.lib; let
     nvim-treesitter-context # nvim-treesitter-context
     # ^ UI
     # language support
+    nvim-lspconfig
     # ^ language support
     # navigation/editing enhancement plugins
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
@@ -90,6 +91,8 @@ with final.pkgs.lib; let
     pyright
     gopls
     nodePackages.typescript-language-server
+    nodePackages.yaml-language-server
+    terraform-ls
   ];
 in {
   # This is the neovim derivation

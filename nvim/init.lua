@@ -102,3 +102,10 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
+
+
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.ts_ls.setup{}
+require'lspconfig'.terraformls.setup{}
+require'lspconfig'.yamlls.setup{}
+require'lspconfig'.pyright.setup{}
