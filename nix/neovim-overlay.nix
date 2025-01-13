@@ -60,6 +60,11 @@ with final.pkgs.lib; let
     nvim-treesitter-context # nvim-treesitter-context
     tokyonight-nvim
     # ^ UI
+    # DB
+    vim-dadbod
+    vim-dadbod-ui
+    vim-dadbod-completion
+    # ^DB
     # language support
     nvim-lspconfig
     # ^ language support
