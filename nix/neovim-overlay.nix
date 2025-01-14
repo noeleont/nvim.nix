@@ -65,8 +65,14 @@ with final.pkgs.lib; let
     vim-dadbod-ui
     vim-dadbod-completion
     # ^DB
+    # Debugger
+    nvim-dap
+    nvim-dap-ui
+    nvim-dap-virtual-text
+    # ^ Debugger
     # language support
     nvim-lspconfig
+    go-nvim
     # ^ language support
     # navigation/editing enhancement plugins
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
