@@ -27,16 +27,12 @@ local function setup_telekasten()
 
   -- Validate the directory
   if not is_valid_vault_directory(current_dir) then
-    vim.notify("Current directory contains no valid vault. Checking parent", vim.log.levels.WARN)
+    current_dir = get_parent_directory(current_dir)
   end
 
   -- Check the parent directory
-  current_dir = get_parent_directory(current_dir)
   if not is_valid_vault_directory(current_dir) then
-    vim.notify("Parent directory contains no valid vault. Using ~", vim.log.levels.WARN)
     current_dir = "~"
-  else
-    vim.notify("Parent directory contains valid vault.", vim.log.levels.INFO)
   end
 
   -- Configure telekasten with the current directory
