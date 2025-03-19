@@ -105,6 +105,7 @@ with final.pkgs.lib; let
     nodePackages.typescript-language-server
     nodePackages.yaml-language-server
     terraform-ls
+    helm-ls
   ];
 in {
   # This is the neovim derivation
