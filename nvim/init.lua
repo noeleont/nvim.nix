@@ -3,7 +3,7 @@ local fn = vim.fn
 local opt = vim.o
 local g = vim.g
 
-cmd[[colorscheme tokyonight]]
+cmd [[colorscheme tokyonight]]
 
 -- <leader> key. Defaults to `\`. Some people prefer space.
 -- g.mapleader = ' '
@@ -106,9 +106,4 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
 
-
-require'lspconfig'.gopls.setup{}
-require'lspconfig'.ts_ls.setup{}
-require'lspconfig'.terraformls.setup{}
-require'lspconfig'.yamlls.setup{}
-require'lspconfig'.pyright.setup{}
+vim.lsp.enable({'gopls', 'ts_ls', 'terraformls', 'yamlls', 'pyright', 'helm_ls'})
